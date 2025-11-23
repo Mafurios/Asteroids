@@ -41,6 +41,7 @@ def main():
                 return
         screen.fill("black")
         updatable.update(dt)
+        player.shoot_cooldown_timer -= dt
         for sprite in drawable:
             sprite.draw(screen)
         for asteroid in asteroids:
@@ -54,3 +55,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
